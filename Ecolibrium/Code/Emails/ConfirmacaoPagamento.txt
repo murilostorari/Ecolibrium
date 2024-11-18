@@ -1,0 +1,37 @@
+
+Seu pagamento para o pedido #{{order.id}} foi confirmado!
+
+Olá {{contact_name}},
+
+Recebemos seu pagamento com sucesso!
+
+Confirmamos o pagamento da sua compra na {{store_name}}. Abaixo estão os detalhes do seu pedido:
+
+Pedido #{{order.id}}
+
+{% for product in order.products %}
+
+{{ product.quantity }} x {{ product.name ~ product.variationName }} {% endfor %}
+{% if order.shipping_pickup_type == 'pickup' %} Você pode retirar seu pedido em {{ order.shipping_extra.store_branch.name }} ({{ order.shipping_extra.store_branch.extra }}). {% else %} Estamos preparando seu pedido para envio. Em breve, você receberá uma notificação quando ele estiver a caminho! {% endif %}
+
+Dados de Envio:
+{% if order.shipping_pickup_type == 'ship' %}
+
+Endereço: {{order.shipping_address}} {% if order.shipping_floor %}
+Complemento: {{order.shipping_floor}}
+{% endif %} {% if order.shipping_locality %}
+Bairro: {{order.shipping_locality}}
+{% endif %}
+Cidade: {{order.shipping_city}}
+CEP: {{order.shipping_zipcode}}
+País: {{order.shipping_country}}
+Estado: {{order.shipping_province}}
+{% elseif order.shipping_pickup_type == 'pickup' %}
+
+Endereço de Retirada:
+{{ order.shipping_extra.store_branch.name }} / {{ order.shipping_extra.store_branch.extra }} {% endif %}
+{% if order.statusPageUrl %} Acompanhe o status do seu pedido clicando no link abaixo:
+[Ver Status do Pedido]({{ order.statusPageUrl }}) {% endif %}
+
+Atenciosamente,
+Equipe {{store_name}}

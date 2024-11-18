@@ -1,0 +1,58 @@
+Seu pedido #{{order.id}} realizado na {{store_name}} já está a caminho!
+
+{% if order.shipping_pickup_type == 'ship' %}
+{% if order.fulfillmentTotal %}
+Olá {{ order.shipping_name }}! Estamos felizes em informar que seu pedido {{ order.fulfillmentNumber }} de {{ order.fulfillmentTotal }} já está a caminho!
+{% else %}
+Olá {{ order.shipping_name }}! Seu pedido já foi enviado e está a caminho!
+{% endif %}
+
+Seu pedido foi enviado via {{ order.shippingMethod }} para o endereço abaixo:
+
+Endereço: {{order.shipping_address}}  
+{% if order.shipping_floor %}Complemento: {{order.shipping_floor}}  
+{% endif %}  
+{% if order.shipping_locality %}Bairro: {{order.shipping_locality}}  
+{% endif %}
+Cidade: {{order.shipping_city}}  
+CEP: {{order.shipping_zipcode}}  
+País: {{order.shipping_country}}  
+Estado: {{order.shipping_province}}  
+
+{% elseif order.shipping_pickup_type == 'pickup' %}
+{% if order.fulfillmentTotal %}
+Olá {{ order.shipping_name }}! Seu pedido {{ order.fulfillmentNumber }} de {{ order.fulfillmentTotal }} já está disponível para retirada!
+{% else %}
+Olá {{ order.shipping_name }}! Seu pedido já está disponível para retirada!
+{% endif %}
+
+Ponto de retirada:
+{{ order.shipping_extra.store_branch.name }} - {{ order.shipping_extra.store_branch.extra }}
+
+{% elseif order.shipping_option %}
+{{ order.shipping_option }}
+{% endif %}
+
+{% if order.tracking_number %}
+{% if order.fulfillmentTotal %}
+Aqui está o código de rastreamento do seu pedido: {{ order.tracking_number }}.
+{% else %}
+Seu código de rastreamento é: {{ order.tracking_number }}
+{% endif %}
+{% endif %}
+
+{% if order.statusPageUrl %}
+Você pode acompanhar a entrega do seu pedido na página de status:  
+{{ order.statusPageUrl }}
+{% elseif order.tracking_url %}
+Acompanhe o status de entrega pelo link abaixo:  
+{{ order.tracking_url | raw }}
+
+Obs.: O status pode levar alguns minutos para ser atualizado na página de rastreamento.
+{% endif %}
+
+Agradecemos sua compra na {{store_name}}!  
+Conte conosco para o que precisar.
+
+Atenciosamente,  
+Equipe {{store_name}}

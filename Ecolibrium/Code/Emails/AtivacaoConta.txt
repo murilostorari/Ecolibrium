@@ -1,0 +1,19 @@
+Finalize a criação da sua conta na {{ store_name }}!
+
+Olá {{ customer.name }},
+
+Parabéns! Você está prestes a criar sua conta na {{ store_name }}!
+
+Para finalizar o processo de ativação e começar a aproveitar todas as vantagens que preparamos para você, basta clicar no link abaixo:
+
+[Ativar minha conta]( {{ url }} )
+
+Ao ativar sua conta, você poderá fazer compras de forma mais rápida, acompanhar seu histórico de pedidos e ficar por dentro de ofertas especiais que preparamos só para você!
+
+Aguardamos ansiosamente para vê-lo(a) aproveitando tudo o que a {{ store_name }} tem a oferecer!
+
+Atenciosamente,
+Equipe {{ store_name }}
+
+***
+Caso não tenha sido você quem fez essa solicitação, por favor, desconsidere este e-mail.

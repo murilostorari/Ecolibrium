@@ -1,0 +1,23 @@
+Retorne à sua compra na loja {{ store_name }}
+
+Seu carrinho está esperando por você! 
+
+Olá {{ cart.contact_name }},
+
+Percebemos que você deixou alguns itens incríveis no seu carrinho na {{ store_name }} e não queríamos que você perdesse a oportunidade de finalizá-los!
+
+Aqui está o que você adicionou ao seu carrinho:
+
+{% for product in cart.contents %} {{ product.quantity }} x {{ product.name }} {% endfor %}
+
+Está quase lá! Para concluir sua compra, basta clicar no link abaixo:
+
+[Finalizar minha compra]( {{ cart.abandoned_checkout_url }} )
+
+Aproveite e não deixe essa oferta escapar! 
+
+Com carinho,
+Equipe {{ store_name }}
+
+* * * 
+Se você não fez essa compra ou não reconhece o carrinho, basta desconsiderar este e-mail.

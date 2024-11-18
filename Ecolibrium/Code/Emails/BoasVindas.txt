@@ -1,0 +1,19 @@
+
+Bem vindo à {{ store_name }}!
+
+Olá, {{ customer.name }}! Seja muito bem-vindo(a) à {{store_name}}! 
+
+Estamos muito felizes por você fazer parte da nossa comunidade! Ao criar sua conta em nossa loja, você deu o primeiro passo para aproveitar uma experiência de compras prática e personalizada. Agora, com sua conta, você poderá:
+
+Economizar tempo: seus dados estão todos salvos para facilitar nas próximas compras.
+Acompanhar seu histórico: visualize facilmente todos os pedidos e acompanhe suas compras.
+Receber ofertas exclusivas: fique de olho no seu e-mail para receber nossas promoções e lançamentos em primeira mão!
+Dica especial: ao fazer login, você pode personalizar ainda mais sua experiência conosco!
+
+Qualquer dúvida, nossa equipe está pronta para ajudar. É só nos chamar! 
+
+Com carinho,
+Equipe {{store_name}}
+
+* * * 
+Se você não criou uma conta em nosso site, desconsidere este e-mail.

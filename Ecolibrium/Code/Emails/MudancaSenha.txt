@@ -1,0 +1,15 @@
+Solicitação de Alteração de Senha na {{ store_name }}
+
+Olá {{ customer.name }},
+
+Recebemos uma solicitação para alterar a sua senha na {{ store_name }}. Para concluir a alteração, basta clicar no link abaixo:
+
+[Alterar minha senha]({{ url }})
+
+Se você não fez essa solicitação, não se preocupe. Apenas ignore este e-mail e sua conta continuará segura.
+
+Atenciosamente,
+Equipe {{ store_name }}
+
+* * *
+Se você não solicitou uma alteração de senha, desconsidere este e-mail.

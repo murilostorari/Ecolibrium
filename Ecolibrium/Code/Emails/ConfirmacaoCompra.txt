@@ -1,0 +1,50 @@
+Obrigado por sua compra na {{store_name}}!
+
+Obrigado por sua compra na {{store_name}}!
+
+Resumo do Pedido:
+Pedido Nº: #{{order.id}}
+
+Itens Comprados: {% for product in order.products %}
+
+{{ product.quantity }} x {{product.name ~ product.variationName}} — {{ product.priceFormat }} cada {% endfor %}
+Descontos Aplicados: {% for promotion in order.promotional_discount.promotions_applied %}
+
+{% if promotion.discount_script_type == "NAtX%off" %}{{ promotion.selected_threshold.discount_decimal_percentage * 100 }}% OFF{% else %}Promoção: {{ promotion.discount_script_type }}{% endif %} {% if promotion.scope_value_name %}em {{ promotion.scope_value_name }}{% endif %} {% if promotion.discount_script_type == "NAtX%off" %}para {{ promotion.selected_threshold.quantity }} ou mais un.{% endif %}: -{{promotion.total_discount_amount_short}} {% endfor %}
+{% if order.shipping_pickup_type != 'non-shippable' %} Entrega: {% if order.shipping_pickup_type == 'ship' %}
+
+Custo de frete: {% if order.show_shipping_price %}{% if order.shipping == 0 %}Grátis{% else %}{{order.shippingFormat}}{% endif %}{% else %}A combinar{% endif %} {% else %}
+Custo de entrega: {% if order.show_shipping_price %}{% if order.shipping == 0 %}Grátis{% else %}{{order.shippingFormat}}{% endif %}{% else %}A combinar{% endif %} {% endif %} {% endif %}
+{% if order.discountCoupon > 0 %} Cupom de Desconto: ({{order.coupon}}) -{{order.discountCouponFormat}} {% endif %}
+
+{% if order.discountGateway > 0 %} Desconto em {{order.paymentMethod}}: -{{order.discountGatewayFormat}} {% endif %}
+
+Total Final: {{order.totalFormat}}
+
+{% if order.boleto_url %} Para pagamento por boleto bancário, clique no link abaixo para acessá-lo:
+Imprimir boleto {% endif %}
+
+Aguardamos a confirmação do seu pagamento, que pode levar até 72 horas, dependendo do método de pagamento escolhido. Pagamentos via cartão de crédito geralmente são confirmados instantaneamente.
+
+Não se preocupe! Enviaremos uma mensagem assim que o pagamento for confirmado.
+
+{% if order.shipping_pickup_type == 'ship' %} Endereço de Entrega:
+
+Endereço: {{order.shipping_address}} {% if order.shipping_floor %}
+Complemento: {{order.shipping_floor}} {% endif %} {% if order.shipping_locality %}
+Bairro: {{order.shipping_locality}} {% endif %}
+Cidade: {{order.shipping_city}}
+CEP: {{order.shipping_zipcode}}
+País: {{order.shipping_country}}
+Estado: {{order.shipping_province}}
+{% elseif order.shipping_pickup_type == 'pickup' and order.shipping_extra.store_branch %} Endereço para Retirada:
+
+{{ order.shipping_extra.store_branch.name }} — {{ order.shipping_extra.store_branch.extra }} {% elseif order.shipping_option %} Opção de Entrega: {{ order.shipping_option }} {% endif %}
+{% if order.statusPageUrl %} Acompanhe o status do seu pedido no link abaixo:
+[Status do Pedido]({{ order.statusPageUrl }}) {% endif %}
+
+Atenciosamente,
+Equipe {{store_name}}
+
+***
+Se você não fez essa compra ou estava apenas testando nosso site, desconsidere este e-mail.

@@ -1,0 +1,17 @@
+Informações sobre o Cancelamento do Seu Pedido #{{order.id}}
+
+Olá {{contact_name}},
+
+Lamentamos informar que o seu pedido #{{order.id}} foi cancelado.
+
+{% if reason == 'customer' %}O cancelamento foi realizado conforme a sua solicitação.{% elseif reason == 'inventory' %}Infelizmente, não temos estoque suficiente para concluir o seu pedido, por isso ele foi cancelado.{% elseif reason == 'fraud' %}O pedido foi cancelado devido à falta de aprovação cadastral.{% elseif reason == 'expired' %}O seu pedido expirou e foi cancelado.{% else %}O cancelamento do seu pedido #{{order.id}} ocorreu por motivos internos da empresa.{% endif %}
+
+{% if payment_status == 'voided' %}Não se preocupe, o pagamento foi cancelado automaticamente.{% elseif payment_status == 'refunded' %}Seu pagamento foi reembolsado integralmente.{% endif %}
+
+Caso tenha alguma dúvida ou precise de mais informações, fique à vontade para responder a este e-mail. Estamos à disposição para ajudar!
+
+Atenciosamente,
+Equipe {{store_name}}
+
+* * * 
+Se você não realizou esta compra ou estava apenas testando nosso site, por favor, desconsidere este e-mail.

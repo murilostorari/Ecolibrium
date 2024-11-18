@@ -1,0 +1,388 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        /* ========== CLIENT-SPECIFIC STYLES ========== */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        #outlook a {
+            padding: 0;
+        }
+
+        /* Force Outlook to provide a "view in browser" message */
+        .ReadMsgBody,
+        .ExternalClass {
+            width: 100%;
+        }
+
+        /* Full width in Hotmail */
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        /* Normal line spacing */
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        /* Consistent text sizes */
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        /* Remove Outlook table spacing */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* Smooth image rendering */
+
+        /* ========== RESET STYLES ========== */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body,
+        #bodyTable,
+        #bodyCell {
+            height: 100% !important;
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+        }
+
+        /* ========== TEMPLATE STYLES ========== */
+
+        /* Page Styles */
+        #bodyCell {
+            padding: 20px;
+        }
+
+        #templateContainer {
+            width: 600px;
+        }
+
+        body,
+        #bodyTable {
+            background-color: #F4F4F4;
+        }
+
+        #bodyCell {
+            border-top: 4px solid #e74c3c;
+        }
+
+        /* Heading Styles */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #393939 !important;
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555555 !important;
+            font-size: 24px;
+        }
+
+        h3 {
+            color: #777777 !important;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        h4 {
+            color: #999999 !important;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        p {
+            color: #393939;
+            font-weight: 500;
+        }
+
+        /* Body Styles */
+        #templateBody {
+            background-color: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bodyContent {
+            color: #505050;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 200%;
+            padding: 30px 40px 8px 40px;
+        }
+
+        .bodyContent a:link,
+        .bodyContent a:visited {
+            color: #e74c3c;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .bodyContent a.btn {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #e74c3c;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .bodyContent img {
+            display: block;
+            height: auto;
+            max-width: 50%;
+            margin: 0 auto 20px;
+        }
+
+        /* Footer Styles */
+        #templateFooter {
+            color: #AAAAAA;
+        }
+
+        .footerContent {
+            color: #AAAAAA;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 150%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerContent a:link,
+        .footerContent a:visited {
+            color: #666666;
+            text-decoration: underline;
+        }
+
+        /* ========== MOBILE STYLES ========== */
+        @media only screen and (max-width: 480px) {
+
+            /* Client-Specific Mobile Styles */
+            body,
+            table,
+            td,
+            p,
+            a,
+            li,
+            blockquote {
+                -webkit-text-size-adjust: none !important;
+            }
+
+            body {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            /* Mobile Reset Styles */
+            #bodyCell {
+                padding: 10px !important;
+            }
+
+            /* Mobile Template Styles */
+            #templateContainer {
+                max-width: 600px !important;
+                width: 100% !important;
+            }
+
+            h1 {
+                font-size: 30px !important;
+            }
+
+            h2 {
+                font-size: 24px !important;
+            }
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            h4 {
+                font-size: 18px !important;
+            }
+
+            .bodyContent {
+                font-size: 18px !important;
+                line-height: 125% !important;
+            }
+
+            .footerContent {
+                font-size: 14px !important;
+                line-height: 115% !important;
+            }
+
+            .footerContent a {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top" id="bodyCell">
+                    <!-- Template Container -->
+                    <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+                        <!-- Header -->
+                        <tr>
+                            <td align="left" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                    style="background-color: #FFFFFF; padding: 20px 0;">
+                                    <tr>
+                                        <td align="center">
+                                            <!-- Logo Atualizada -->
+                                            <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Ecolibrium%20-%20Logo.png"
+                                                alt="{{store_name}}" style="max-width: 150px; margin-top: 22px;">
+
+                                            <!-- Separador abaixo da logo -->
+                                            <hr
+                                                style="border: 1px solid rgba(57, 57, 57, 0.1); width: 86%; margin-top: 16px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Body -->
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                                    <tr>
+                                        <td valign="top" class="bodyContent">
+                                            <!-- Ilustração acima do Cancelamento -->
+                                            <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Cancel-Illustration.png"
+                                                alt="Pedido Cancelado"
+                                                style="max-width: 50%; height: auto; margin-bottom: 20px;"
+                                                title="Web illustrations by Storyset">
+
+                                            <h1>Olá, {{ contact_name }}!</h1>
+                                            <p>Recebemos uma solicitação para cancelar o seu pedido #{{order.id}} na
+                                                {{store_name}}. Seguem os detalhes do seu cancelamento:</p>
+
+                                            <!-- Razão do cancelamento -->
+                                            {% if reason == 'customer' %}
+                                            <p><strong>Motivo:</strong> Cancelamento solicitado por você.</p>
+                                            {% elseif reason == 'inventory' %}
+                                            <p><strong>Motivo:</strong> Não temos estoque suficiente para completar o
+                                                pedido.</p>
+                                            {% elseif reason == 'fraud' %}
+                                            <p><strong>Motivo:</strong> Não houve aprovação cadastral para o pedido.</p>
+                                            {% elseif reason == 'expired' %}
+                                            <p><strong>Motivo:</strong> O pedido expirou.</p>
+                                            {% else %}
+                                            <p><strong>Motivo:</strong> Cancelamento por razões alheias à empresa.</p>
+                                            {% endif %}
+
+                                            {% if payment_status == 'voided' %}
+                                            <p>Não se preocupe, nós cancelamos seu pagamento.</p>
+                                            {% elseif payment_status == 'refunded' %}
+                                            <p>Não se preocupe, devolvemos seu dinheiro integralmente.</p>
+                                            {% endif %}
+
+                                            <p style="text-align: left;">Se tiver qualquer dúvida, estamos à disposição
+                                                para ajudar.</p>
+
+                                            <p style="text-align: center;">Atenciosamente,<br><strong>Equipe
+                                                    {{store_name}}</strong></p>
+
+                                            <hr
+                                                style="border: 1px solid rgba(57, 57, 57, 0.1); margin-top: 26px; margin-bottom: 8px;">
+
+                                            <div style="margin-top: 18px; text-align: center;">
+                                                <a href="https://facebook.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px; margin-right: 10px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Facebook-Black.png"
+                                                        alt="Facebook"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                                <a href="https://twitter.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px; margin-right: 10px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/X-Black.png"
+                                                        alt="Twitter"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                                <a href="https://instagram.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Instagram-Black.png"
+                                                        alt="Instagram"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                                    <tr>
+                                        <td valign="top" class="footerContent" style="text-align: center;">
+                                            <p>Se você não fez este pedido ou tem alguma dúvida, entre em contato
+                                                conosco.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>

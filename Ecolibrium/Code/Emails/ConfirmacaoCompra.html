@@ -1,0 +1,416 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="https://www.w3.org/1999/xhtml" lang="pt">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <style type="text/css">
+        /* ========== CLIENT-SPECIFIC STYLES ========== */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        #outlook a {
+            padding: 0;
+        }
+
+        .ReadMsgBody,
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        body,
+        table,
+        td,
+        p,
+        a,
+        li,
+        blockquote {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* ========== RESET STYLES ========== */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body,
+        #bodyTable,
+        #bodyCell {
+            height: 100% !important;
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+        }
+
+        /* ========== TEMPLATE STYLES ========== */
+        #bodyCell {
+            padding: 20px;
+        }
+
+        #templateContainer {
+            width: 600px;
+        }
+
+        body,
+        #bodyTable {
+            background-color: #F4F4F4;
+        }
+
+        #bodyCell {
+            border-top: 4px solid #27ae60;
+        }
+
+        /* Heading Styles */
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Montserrat', Arial, sans-serif;
+            line-height: 100%;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            color: #393939 !important;
+            font-size: 36px;
+            font-weight: 600;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555555 !important;
+            font-size: 24px;
+        }
+
+        h3 {
+            color: #777777 !important;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        h4 {
+            color: #999999 !important;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        p {
+            color: #393939;
+            font-weight: 500;
+        }
+
+        /* Body Styles */
+        #templateBody {
+            background-color: #ffffff;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bodyContent {
+            color: #505050;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 16px;
+            line-height: 200%;
+            padding: 30px 40px 8px 40px;
+        }
+
+        .bodyContent a:link,
+        .bodyContent a:visited {
+            color: #27ae60;
+            font-weight: bold;
+            text-decoration: underline;
+        }
+
+        .bodyContent a.btn {
+            display: inline-block;
+            padding: 8px 15px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #27ae60;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .bodyContent img {
+            display: block;
+            height: auto;
+            max-width: 50%;
+            margin: 0 auto 20px;
+        }
+
+        .orderDetails {
+            width: 100%;
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .orderDetails td,
+        .orderDetails th {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #e8e8e8;
+        }
+
+        .orderDetails th {
+            background-color: #f4f4f4;
+            font-weight: bold;
+        }
+
+        .totalRow {
+            background-color: #f9f9f9;
+            font-weight: bold;
+        }
+
+        .btn {
+            background-color: #ECEBEC;
+            border-radius: 6px;
+            color: #000000;
+            display: inline-block;
+            font-family: sans-serif;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            padding: 12px 20px;
+            width: 220px;
+        }
+
+        /* Footer Styles */
+        #templateFooter {
+            color: #AAAAAA;
+        }
+
+        .footerContent {
+            color: #AAAAAA;
+            font-family: 'Montserrat', Arial, sans-serif;
+            font-size: 14px;
+            line-height: 150%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .footerContent a:link,
+        .footerContent a:visited {
+            color: #666666;
+            text-decoration: underline;
+        }
+
+        /* ========== MOBILE STYLES ========== */
+        @media only screen and (max-width: 480px) {
+
+            body,
+            table,
+            td,
+            p,
+            a,
+            li,
+            blockquote {
+                -webkit-text-size-adjust: none !important;
+            }
+
+            body {
+                width: 100% !important;
+                min-width: 100% !important;
+            }
+
+            #bodyCell {
+                padding: 10px !important;
+            }
+
+            #templateContainer {
+                max-width: 600px !important;
+                width: 100% !important;
+            }
+
+            h1 {
+                font-size: 30px !important;
+            }
+
+            h2 {
+                font-size: 24px !important;
+            }
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            h4 {
+                font-size: 18px !important;
+            }
+
+            .bodyContent {
+                font-size: 18px !important;
+                line-height: 125% !important;
+            }
+
+            .footerContent {
+                font-size: 14px !important;
+                line-height: 115% !important;
+            }
+
+            .footerContent a {
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0">
+    <center>
+        <table align="center" border="0" cellpadding="0" cellspacing="0" height="100%" width="100%" id="bodyTable">
+            <tr>
+                <td align="center" valign="top" id="bodyCell">
+                    <table border="0" cellpadding="0" cellspacing="0" id="templateContainer">
+                        <!-- Header -->
+                        <tr>
+                            <td align="left" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                    style="background-color: #FFFFFF; padding: 20px 0;">
+                                    <tr>
+                                        <td align="center">
+                                            <!-- Logo Atualizada -->
+                                            <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Ecolibrium%20-%20Logo.png"
+                                                alt="{{store_name}}" style="max-width: 150px; margin-top: 22px;">
+
+                                            <!-- Separador abaixo da logo -->
+                                            <hr
+                                                style="border: 1px solid rgba(57, 57, 57, 0.1); width: 86%; margin-top: 16px;">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateBody">
+                                    <tr>
+                                        <td valign="top" class="bodyContent">
+                                            <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Purchase-Illustration.png"
+                                                alt="Compra confirmada!"
+                                                style="max-width: 50%; height: auto; margin-bottom: 20px;"
+                                                title="Shopping illustrations by Storyset">
+                                            <h1>Obrigado por comprar na {{store_name}}!</h1>
+                                            <p>Recebemos seu pagamento com sucesso! Confirmamos o pagamento da sua
+                                                compra na {{store_name}}. Abaixo estão os detalhes do seu pedido:</p>
+
+                                            <table class="orderDetails">
+                                                <tr>
+                                                    <th>Produto</th>
+                                                    <th style="text-align: center;">Quantidade</th>
+                                                    <th style="text-align: center;">Preço</th>
+                                                </tr>
+                                                {% for product in order.products %}
+                                                <tr>
+                                                    <td>{{ product.name ~ product.variationName }}</td>
+                                                    <td style="text-align: center;">{{ product.quantity }}</td>
+                                                    <td style="text-align: center;">{{ product.priceFormat }}</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </table>
+
+                                            <table class="orderDetails totalRow">
+                                                <tr>
+                                                    <td align="left">Frete:</td>
+                                                    <td colspan="2" style="text-align: right;">{{ order.shippingFormat
+                                                        }}</td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left">Total:</td>
+                                                    <td colspan="2" style="text-align: right;">{{ order.totalFormat }}
+                                                    </td>
+                                                </tr>
+                                            </table>
+
+                                            <p style="margin-top: 20px;">Seu pedido já está sendo preparado e, em breve,
+                                                enviaremos uma atualização com o status da entrega. Caso tenha alguma
+                                                dúvida, nossa equipe está à disposição para ajudar.</p>
+                                            <p style="text-align: center;">Atenciosamente,<br><strong>Equipe
+                                                    {{store_name}}</strong></p>
+
+                                            <hr
+                                                style="border: 1px solid rgba(57, 57, 57, 0.1); margin-top: 26px; margin-bottom: 8px;">
+
+                                            <div style="margin-top: 18px; text-align: center;">
+                                                <a href="https://facebook.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px; margin-right: 10px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Facebook-Black.png"
+                                                        alt="Facebook"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                                <a href="https://twitter.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px; margin-right: 10px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/X-Black.png"
+                                                        alt="Twitter"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                                <a href="https://instagram.com"
+                                                    style="display: inline-block; width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(57, 57, 57, .25); text-align: center; line-height: 40px;">
+                                                    <img src="https://raw.githubusercontent.com/murilostorari/Ecolibrium/main/Instagram-Black.png"
+                                                        alt="Instagram"
+                                                        style="max-width: 20px; max-height: 20px; margin-top: 10px;">
+                                                </a>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <!-- Footer -->
+                        <tr>
+                            <td align="center" valign="top">
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" id="templateFooter">
+                                    <tr>
+                                        <td valign="top" class="footerContent" style="text-align: center;">
+                                            <p>Se você não fez essa compra ou estava simplesmente testando nosso site,
+                                                desconsidere este e-mail.</p>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>
+
+</html>
